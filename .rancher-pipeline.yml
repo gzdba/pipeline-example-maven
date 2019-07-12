@@ -3,8 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: maven:3-jdk-7
-      shellScript: |-
-        mvn clean install
+      shellScript: mvn clean install
 - name: Publish
   steps:
   - publishImageConfig:
@@ -15,3 +14,11 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+notification:
+  recipients:
+  - recipient: linzj3
+    notifier: c-zqbws:n-cmpgr
+  condition:
+  - Success
+  - Changed
+  - Failed
