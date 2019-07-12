@@ -10,8 +10,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
-      registry: 10.18.68.74:8080
+      registry: 127.0.0.1:34994
 - name: Deploy
   steps:
   - applyYamlConfig:
