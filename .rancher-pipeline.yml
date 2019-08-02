@@ -10,7 +10,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
       registry: 10.18.68.74:8080
     env:
       PLUGIN_DEBUG: "true"
