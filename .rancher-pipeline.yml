@@ -11,7 +11,7 @@ stages:
       buildContext: .
       tag: example-greenhouse:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 127.0.0.1:34994
+      registry: 10.18.68.74:8080
     env:
       PLUGIN_DEBUG: "true"
       PLUGIN_INSECURE: "true"
