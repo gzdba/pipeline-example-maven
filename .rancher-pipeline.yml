@@ -2,7 +2,7 @@ stages:
 - name: Build
   steps:
   - runScriptConfig:
-      image: maven:3-jdk-7
+      image: 10.18.68.74:8080/mideazy/maven3.7:latest
       shellScript: mvn clean install
 - name: Publish
   steps:
